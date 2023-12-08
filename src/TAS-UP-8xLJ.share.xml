@@ -33,6 +33,14 @@
             </ComObjectRefs>
           </Static>
           <Dynamic>
+            <ChannelIndependentBlock>
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Hardware" Text="Hardware" Icon="card-outline" HelpContext="Empty">
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Taster" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Die Einrichtung der Taster erfolgt über den Menüpunkt &quot;Virtuelle Taster&quot;. Sobald du auf einem Kanal den Modus ausgewählt hast, kannst du unter Tastereingänge eine bzw. zwei Taste(n) zuweisen und verwenden." />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Sensoren" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Aktuell existiert noch keine Unterstützung für die im Taster integrierten Sensoren (Temperatur/Luftfreuchte)" />
+              </ParameterBlock>
+            </ChannelIndependentBlock>
           </Dynamic>
         </ApplicationProgram>
       </ApplicationPrograms>

@@ -12,9 +12,8 @@ class HardwareModule : public OpenKNX::Module
 {
 
   public:
-    HardwareModule();
-
-    const char *name() override;
+    const std::string name() override;
+    const std::string version() override;
     void loop() override;
     void setup() override;
 

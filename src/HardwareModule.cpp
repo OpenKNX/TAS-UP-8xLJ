@@ -1,11 +1,13 @@
 #include "HardwareModule.h"
 
-HardwareModule::HardwareModule()
-{}
-
-const char *HardwareModule::name()
+const std::string HardwareModule::name()
 {
-    return "HardwareModule";
+    return "TAS";
+}
+
+const std::string HardwareModule::version()
+{
+    return MAIN_Version;
 }
 
 void HardwareModule::setup()
@@ -57,7 +59,7 @@ void HardwareModule::processTasterInputs()
 
         if (status != _taster[i].status)
         {
-            log("%i: %i", i, status);
+            logInfoP("%i: %i", i, status);
             knx.getGroupObject(21 + i).value(status, DPT_Switch);
             _taster[i].status = status;
         }

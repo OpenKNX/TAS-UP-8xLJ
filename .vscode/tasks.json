@@ -6,47 +6,52 @@
         {
             "label": "OpenKNXproducer",
             "type": "shell",
-            "options": {
-                "cwd": "${workspaceFolder}/src"
-            },
             "command": "~/bin/OpenKNXproducer.exe",
             "args": [
                 "create",
                 "--Debug",
                 "-h",
-                "TAS-UP-8xLJKnxprod.h",
-                "TAS-UP-8xLJ"
+                "include/knxprod.h",
+                "src/TAS-UP-8xLJ"
             ],
             "problemMatcher": [],
             "group": "test"
         },
         {
-            "label": "RP2040: Build",
+            "label": "Gen. Dependencies.txt",
+            "type": "shell",
+            "command": "lib/OGM-Common/scripts/setup/reusable/Build-Dependencies.ps1",
+            "args": [],
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "Develop: TAS-UP-8xLJ",
             "type": "shell",
             "command": "scripts/OpenKNX-Build.ps1",
             "args": [
-                "build_RP2040"
+                "develop_TAS_UP_8xLJ"
             ],
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "RP2040: Build & Upload (USB)",
+            "label": "Develop: TAS-UP-8xLJ (USB)",
             "type": "shell",
             "command": "scripts/OpenKNX-Build.ps1",
             "args": [
-                "upload_USB_RP2040",
+                "develop_TAS_UP_8xLJ_USB",
                 "upload"
             ],
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "RP2040: Build & Upload (JLINK)",
+            "label": "Develop: TAS-UP-8xLJ (JLINK)",
             "type": "shell",
             "command": "scripts/OpenKNX-Build.ps1",
             "args": [
-                "upload_JLINK_RP2040",
+                "develop_TAS_UP_8xLJ_JLINK",
                 "upload"
             ],
             "group": "build",
@@ -55,18 +60,18 @@
         {
             "label": "Build-Release",
             "type": "shell",
-            "command": "scripts/Build-Release.ps1", 
+            "command": "scripts/Build-Release.ps1",
             "args": [
                 "Release"
             ],
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": "test"
         },
         {
             "label": "Build-Beta",
             "type": "shell",
             "command": "scripts/Build-Release.ps1",
-            "args": [
-            ],
+            "args": [],
             "problemMatcher": [],
             "group": "test"
         }

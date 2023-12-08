@@ -37,7 +37,7 @@ if (!$?) { exit 1 }
 # if (!$?) { exit 1 }
 
 # build firmware for PiPico-BCU-Connector
-lib/OGM-Common/scripts/setup/reusable/Build-Step.ps1 release_TAS-UP-8xLJ firmware-TAS-UP-8xLJ uf2
+lib/OGM-Common/scripts/setup/reusable/Build-Step.ps1 release_TAS_UP_8xLJ firmware-TAS-UP-8xLJ uf2
 if (!$?) { exit 1 }
 
 # execute generic post-build steps
